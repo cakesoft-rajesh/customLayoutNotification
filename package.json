@@ -1,17 +1,17 @@
 {
-  "_from": "@cryptoticket/react-native-push-notification@^1.1.1",
-  "_id": "@cryptoticket/react-native-push-notification@1.1.1",
+  "_from": "customLayoutNotification@^1.1.1",
+  "_id": "customLayoutNotification@1.1.1",
   "_inBundle": false,
   "_integrity": "sha512-ZmPtdBQHwy8WHUN6u2rX8oDYCMBeSP0XqDv3RHFiT4SOkYPVVX4AaJ700BuWqiiG95AflOZgFG2sQdtzgAe7VQ==",
-  "_location": "/@cryptoticket/react-native-push-notification",
+  "_location": "/customLayoutNotification",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@cryptoticket/react-native-push-notification@^1.1.1",
-    "name": "@cryptoticket/react-native-push-notification",
-    "escapedName": "@cryptoticket%2freact-native-push-notification",
-    "scope": "@cryptoticket",
+    "raw": "customLayoutNotification@^1.1.1",
+    "name": "customLayoutNotification",
+    "escapedName": "customLayoutNotification",
+    "scope": "customLayoutNotification",
     "rawSpec": "^1.1.1",
     "saveSpec": null,
     "fetchSpec": "^1.1.1"
@@ -19,41 +19,25 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@cryptoticket/react-native-push-notification/-/react-native-push-notification-1.1.1.tgz",
-  "_shasum": "9221544e044bdf68a67a467b74fbf34eebfd6409",
-  "_spec": "@cryptoticket/react-native-push-notification@^1.1.1",
-  "_where": "/Users/splend-shyam/Documents/workspace/doku/ZocialDoku",
-  "author": {
-    "name": "Vladimir Ryzhak",
-    "email": "ryzhak.vladimir@gmail.com"
-  },
-  "bugs": {
-    "url": "https://github.com/cryptoticket/react-native-push-notification/issues"
-  },
   "bundleDependencies": false,
   "deprecated": false,
-  "description": "React native package that manages push notifications",
   "devDependencies": {
     "react": "16.8.6",
     "react-native": "0.60.5",
     "twilio": "^3.39.2"
   },
-  "homepage": "https://github.com/cryptoticket/react-native-push-notification#readme",
   "keywords": [
     "react native",
-    "react native push notification",
-    "deep links"
   ],
-  "license": "ISC",
   "main": "index.js",
-  "name": "@cryptoticket/react-native-push-notification",
+  "name": "customLayoutNotification",
   "peerDependencies": {
     "react": "^16.8.6",
     "react-native": ">=0.60.5"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cryptoticket/react-native-push-notification.git"
+    "url": "git+https://github.com/cakesoft-rajesh/customLayoutNotification.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
