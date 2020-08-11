@@ -1,6 +1,6 @@
 {
-  "_from": "customLayoutNotification@^1.1.1",
-  "_id": "customLayoutNotification@1.1.1",
+  "_from": "customLayoutNotification@^1.0.0",
+  "_id": "customLayoutNotification@1.0.0",
   "_inBundle": false,
   "_integrity": "sha512-ZmPtdBQHwy8WHUN6u2rX8oDYCMBeSP0XqDv3RHFiT4SOkYPVVX4AaJ700BuWqiiG95AflOZgFG2sQdtzgAe7VQ==",
   "_location": "/customLayoutNotification",
@@ -8,13 +8,13 @@
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "customLayoutNotification@^1.1.1",
+    "raw": "customLayoutNotification@^1.0.0",
     "name": "customLayoutNotification",
     "escapedName": "customLayoutNotification",
     "scope": "customLayoutNotification",
-    "rawSpec": "^1.1.1",
+    "rawSpec": "^1.0.0",
     "saveSpec": null,
-    "fetchSpec": "^1.1.1"
+    "fetchSpec": "^1.0.0"
   },
   "_requiredBy": [
     "/"
@@ -24,7 +24,6 @@
   "devDependencies": {
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "twilio": "^3.39.2"
   },
   "keywords": [
     "react native",
@@ -42,5 +41,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.1.1"
+  "version": "1.0.0"
 }
