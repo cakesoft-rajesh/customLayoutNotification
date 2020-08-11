@@ -157,7 +157,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         val builder = NotificationCompat.Builder(reactApplicationContext, channelId)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentIntent(pendingIntent)
-                .setAutoCancel(true)
+                .setAutoCancel(false)
                 .setPriority(priority)
                 .setOngoing(true)
 
@@ -212,7 +212,6 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
 
         if(template == Templates.WEATHER) {
                 val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.notification_template_weather)
-                // assign "temperature" notification data attribute to "textViewTemperature" TextView in xml template
                 remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
                 remoteViews.setTextViewText(R.id.subuh_title, data.getString("subuh_title"))
                 remoteViews.setTextViewText(R.id.Dzuhur_time, data.getString("Dzuhur_time"))
