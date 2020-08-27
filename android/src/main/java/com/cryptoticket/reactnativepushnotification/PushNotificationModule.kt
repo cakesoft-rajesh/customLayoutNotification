@@ -25,6 +25,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         val COMMON = 0
         val EVENT = 1
         val WEATHER = 2
+        val MR = 3
     }
 
     /**
@@ -85,6 +86,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         constants.put("TEMPLATE_COMMON", Templates.COMMON)
         constants.put("TEMPLATE_EVENT", Templates.EVENT)
         constants.put("TEMPLATE_WEATHER", Templates.WEATHER)
+        constants.put("TEMPLATE_MR", Templates.MR)
         return constants
     }
 
@@ -224,7 +226,20 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
                 remoteViews.setTextViewText(R.id.Isiya_title, data.getString("Isiya_title"))
                 builder.setContent(remoteViews)
             }
-            
+          if(template == Templates.MR) {
+                val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.mr)
+                remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
+                remoteViews.setTextViewText(R.id.subuh_title, data.getString("subuh_title"))
+                remoteViews.setTextViewText(R.id.Dzuhur_time, data.getString("Dzuhur_time"))
+                remoteViews.setTextViewText(R.id.Dzuhur_title, data.getString("Dzuhur_title"))
+                remoteViews.setTextViewText(R.id.Asar_time, data.getString("Asar_time"))
+                remoteViews.setTextViewText(R.id.Asar_title, data.getString("Asar_title"))
+                remoteViews.setTextViewText(R.id.Maghrib_time, data.getString("Maghrib_time"))
+                remoteViews.setTextViewText(R.id.Maghrib_title, data.getString("Maghrib_title"))
+                remoteViews.setTextViewText(R.id.Isiya_time, data.getString("Isiya_time"))
+                remoteViews.setTextViewText(R.id.Isiya_title, data.getString("Isiya_title"))
+                builder.setContent(remoteViews)
+            }  
         // show notification
         NotificationManagerCompat.from(reactApplicationContext).notify(notificationId, builder.build())
     }
