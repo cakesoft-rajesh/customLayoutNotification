@@ -155,9 +155,15 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         }
         val pendingIntent = PendingIntent.getBroadcast(reactApplicationContext, 0, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
-        // prepare base notification builder
+        var iconNotification=1;
+         if(template == Templates.WEATHER) {
+            iconNotification = R.drawable.ic_launcher;
+        }
+          if(template == Templates.MR) {
+            iconNotification = R.drawable.ic_launcher_mr;
+        }
         val builder = NotificationCompat.Builder(reactApplicationContext, channelId)
-                .setSmallIcon(R.drawable.ic_notification)
+                .setSmallIcon(iconNotification)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(false)
                 .setPriority(priority)
