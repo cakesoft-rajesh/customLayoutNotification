@@ -248,8 +248,12 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
             }
           if(template == Templates.MR) {
                 val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.mr)
+                remoteViews.setTextViewText(R.id.imsak_time, data.getString("imsak_time"))
+                remoteViews.setTextViewText(R.id.Imsak_title, data.getString("Imsak_title"))
                 remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
                 remoteViews.setTextViewText(R.id.subuh_title, data.getString("subuh_title"))
+                remoteViews.setTextViewText(R.id.sunrise_time, data.getString("sunrise_time"))
+                remoteViews.setTextViewText(R.id.Sunrise_title, data.getString("Sunrise_title"))
                 remoteViews.setTextViewText(R.id.Dzuhur_time, data.getString("Dzuhur_time"))
                 remoteViews.setTextViewText(R.id.Dzuhur_title, data.getString("Dzuhur_title"))
                 remoteViews.setTextViewText(R.id.Asar_time, data.getString("Asar_time"))
@@ -262,8 +266,12 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
             }  
         if(template == Templates.UIN) {
                 val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.uin)
+                remoteViews.setTextViewText(R.id.imsak_time, data.getString("imsak_time"))
+                remoteViews.setTextViewText(R.id.Imsak_title, data.getString("Imsak_title"))
                 remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
                 remoteViews.setTextViewText(R.id.subuh_title, data.getString("subuh_title"))
+                remoteViews.setTextViewText(R.id.sunrise_time, data.getString("sunrise_time"))
+                remoteViews.setTextViewText(R.id.Sunrise_title, data.getString("Sunrise_title"))
                 remoteViews.setTextViewText(R.id.Dzuhur_time, data.getString("Dzuhur_time"))
                 remoteViews.setTextViewText(R.id.Dzuhur_title, data.getString("Dzuhur_title"))
                 remoteViews.setTextViewText(R.id.Asar_time, data.getString("Asar_time"))
@@ -276,8 +284,12 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
             } 
             if(template == Templates.JASKLIK) {
                 val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.jasklik)
+                remoteViews.setTextViewText(R.id.imsak_time, data.getString("imsak_time"))
+                remoteViews.setTextViewText(R.id.Imsak_title, data.getString("Imsak_title"))
                 remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
                 remoteViews.setTextViewText(R.id.subuh_title, data.getString("subuh_title"))
+                remoteViews.setTextViewText(R.id.sunrise_time, data.getString("sunrise_time"))
+                remoteViews.setTextViewText(R.id.Sunrise_title, data.getString("Sunrise_title"))
                 remoteViews.setTextViewText(R.id.Dzuhur_time, data.getString("Dzuhur_time"))
                 remoteViews.setTextViewText(R.id.Dzuhur_title, data.getString("Dzuhur_title"))
                 remoteViews.setTextViewText(R.id.Asar_time, data.getString("Asar_time"))
