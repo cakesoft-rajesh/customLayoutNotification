@@ -38,6 +38,36 @@
             >
 
             <TextView
+                android:id="@+id/Imsak_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                />
+            <TextView
+                android:id="@+id/imsak_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="1dp"
+            android:background="#ffffff"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="7dp"
+            >
+
+            <TextView
                 android:id="@+id/subuh_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,6 +76,43 @@
                 />
             <TextView
                 android:id="@+id/subuh_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="1dp"
+            android:background="#ffffff"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            />
+            <LinearLayout
+            android:layout_width="1dp"
+            android:background="#ffffff"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="7dp"
+            >
+
+            <TextView
+                android:id="@+id/Sunrise_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#fff"
+                />
+            <TextView
+                android:id="@+id/sunrise_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
