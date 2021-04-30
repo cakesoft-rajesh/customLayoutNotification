@@ -28,6 +28,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         val MR = 3
         val UIN = 4
         val JASKLIK = 5
+        val SNR = 6
     }
 
     /**
@@ -91,6 +92,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         constants.put("TEMPLATE_MR", Templates.MR)
         constants.put("TEMPLATE_UIN", Templates.UIN)
         constants.put("TEMPLATE_JASKLIK", Templates.JASKLIK)
+        constants.put("TEMPLATE_SNR", Templates.SNR)
         return constants
     }
 
@@ -171,6 +173,9 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         }
         if(template == Templates.JASKLIK) {
             iconNotification = R.drawable.ic_launcher_jasklik;
+        }
+        if(template == Templates.SNR) {
+            iconNotification = R.drawable.ic_launcher_snr;
         }
         val builder = NotificationCompat.Builder(reactApplicationContext, channelId)
                 .setSmallIcon(iconNotification)
@@ -299,7 +304,25 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
                 remoteViews.setTextViewText(R.id.Isiya_time, data.getString("Isiya_time"))
                 remoteViews.setTextViewText(R.id.Isiya_title, data.getString("Isiya_title"))
                 builder.setContent(remoteViews)
-            } 
+            }
+            if(template == Templates.SNR) {
+                val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.snr)
+                remoteViews.setTextViewText(R.id.imsak_time, data.getString("imsak_time"))
+                remoteViews.setTextViewText(R.id.Imsak_title, data.getString("Imsak_title"))
+                remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
+                remoteViews.setTextViewText(R.id.subuh_title, data.getString("subuh_title"))
+                remoteViews.setTextViewText(R.id.sunrise_time, data.getString("sunrise_time"))
+                remoteViews.setTextViewText(R.id.Sunrise_title, data.getString("Sunrise_title"))
+                remoteViews.setTextViewText(R.id.Dzuhur_time, data.getString("Dzuhur_time"))
+                remoteViews.setTextViewText(R.id.Dzuhur_title, data.getString("Dzuhur_title"))
+                remoteViews.setTextViewText(R.id.Asar_time, data.getString("Asar_time"))
+                remoteViews.setTextViewText(R.id.Asar_title, data.getString("Asar_title"))
+                remoteViews.setTextViewText(R.id.Maghrib_time, data.getString("Maghrib_time"))
+                remoteViews.setTextViewText(R.id.Maghrib_title, data.getString("Maghrib_title"))
+                remoteViews.setTextViewText(R.id.Isiya_time, data.getString("Isiya_time"))
+                remoteViews.setTextViewText(R.id.Isiya_title, data.getString("Isiya_title"))
+                builder.setContent(remoteViews)
+            }  
         // show notification
         NotificationManagerCompat.from(reactApplicationContext).notify(notificationId, builder.build())
     }
