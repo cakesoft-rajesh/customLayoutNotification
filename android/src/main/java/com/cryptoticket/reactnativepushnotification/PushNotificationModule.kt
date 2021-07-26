@@ -30,6 +30,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         val JASKLIK = 5
         val SNR = 6
         val ANNUR = 7
+        val ASPEK = 8 
     }
 
     /**
@@ -95,6 +96,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         constants.put("TEMPLATE_JASKLIK", Templates.JASKLIK)
         constants.put("TEMPLATE_SNR", Templates.SNR)
         constants.put("TEMPLATE_ANNUR", Templates.ANNUR)
+        constants.put("TEMPLATE_ASPEK", Templates.ASPEK)
         return constants
     }
 
@@ -181,6 +183,9 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
         }
         if(template == Templates.ANNUR) {
             iconNotification = R.drawable.ic_launcher_annur;
+        }
+        if(template == Templates.ASPEK) {
+            iconNotification = R.drawable.ic_launcher_aspek;
         }
         val builder = NotificationCompat.Builder(reactApplicationContext, channelId)
                 .setSmallIcon(iconNotification)
@@ -330,6 +335,24 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
             }
             if(template == Templates.ANNUR) {
                 val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.annur)
+                remoteViews.setTextViewText(R.id.imsak_time, data.getString("imsak_time"))
+                remoteViews.setTextViewText(R.id.Imsak_title, data.getString("Imsak_title"))
+                remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
+                remoteViews.setTextViewText(R.id.subuh_title, data.getString("subuh_title"))
+                remoteViews.setTextViewText(R.id.sunrise_time, data.getString("sunrise_time"))
+                remoteViews.setTextViewText(R.id.Sunrise_title, data.getString("Sunrise_title"))
+                remoteViews.setTextViewText(R.id.Dzuhur_time, data.getString("Dzuhur_time"))
+                remoteViews.setTextViewText(R.id.Dzuhur_title, data.getString("Dzuhur_title"))
+                remoteViews.setTextViewText(R.id.Asar_time, data.getString("Asar_time"))
+                remoteViews.setTextViewText(R.id.Asar_title, data.getString("Asar_title"))
+                remoteViews.setTextViewText(R.id.Maghrib_time, data.getString("Maghrib_time"))
+                remoteViews.setTextViewText(R.id.Maghrib_title, data.getString("Maghrib_title"))
+                remoteViews.setTextViewText(R.id.Isiya_time, data.getString("Isiya_time"))
+                remoteViews.setTextViewText(R.id.Isiya_title, data.getString("Isiya_title"))
+                builder.setContent(remoteViews)
+            }
+            if(template == Templates.ASPEK) {
+                val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.aspek)
                 remoteViews.setTextViewText(R.id.imsak_time, data.getString("imsak_time"))
                 remoteViews.setTextViewText(R.id.Imsak_title, data.getString("Imsak_title"))
                 remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
