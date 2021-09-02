@@ -398,7 +398,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
                 builder.setContent(remoteViews)
             }
             if(template == Templates.UNHASPAY) {
-                val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.UNHASPAY)
+                val remoteViews = RemoteViews(reactApplicationContext.packageName, R.layout.unhaspay)
                 remoteViews.setTextViewText(R.id.imsak_time, data.getString("imsak_time"))
                 remoteViews.setTextViewText(R.id.Imsak_title, data.getString("Imsak_title"))
                 remoteViews.setTextViewText(R.id.subuh_time, data.getString("subuh_time"))
