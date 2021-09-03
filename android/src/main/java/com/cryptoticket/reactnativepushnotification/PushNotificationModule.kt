@@ -200,7 +200,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
             iconNotification = R.drawable.ic_launcher_unhaspay;
         }
         if(template == Templates.JAWARAPAY) {
-            iconNotification = R.drawable.ic_launcher_jawaraPay;
+            iconNotification = R.drawable.ic_launcher_jawarapay;
         }
         
         val builder = NotificationCompat.Builder(reactApplicationContext, channelId)
