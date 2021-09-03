@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/ic_launcher_jawarapay"
+            android:src="@drawable/ic_launcher_jawara_pay"
             android:layout_marginHorizontal="10dp"></ImageView>
         <TextView
             android:layout_width="100dp"
