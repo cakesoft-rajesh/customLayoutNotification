@@ -220,7 +220,7 @@ class PushNotificationModule(reactContext: ReactApplicationContext) : ReactConte
             iconNotification = R.drawable.ic_launcher_hebat;
         }
         if(template == Templates.BARBEKOE) {
-            iconNotification = R.drawable.ic_launcher_purworejo;
+            iconNotification = R.drawable.ic_launcher_barbekoe;
         }
         
         
